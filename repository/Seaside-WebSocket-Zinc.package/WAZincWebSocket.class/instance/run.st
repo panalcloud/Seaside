@@ -8,11 +8,8 @@ run
 			ifNil: [
 				Transcript
 					show:
-						'[WAZincWebSocket] onMessage is nil — sending pusher-expired message and closing websocket';
+						'[WAZincWebSocket] onMessage is nil — closing websocket so client can reconnect';
 					cr.
-				znWebSocket sendMessage:
-					(STONJSON toString:
-						 { ('subject' -> 'pusher-expired') } asDictionary).
 				znWebSocket close ]
 			ifNotNil: [ onMessage value: message ] ] ]
 		on: ConnectionClosed
