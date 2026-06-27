@@ -6,7 +6,8 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"pushers"
+		"pushers",
+		"mutex"
 	],
 	"name" : "WAWebSocketFilter",
 	"type" : "normal"

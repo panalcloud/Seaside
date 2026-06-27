@@ -1,4 +1,5 @@
 initialization
 initialize
 	super initialize.
-	pushers := Dictionary new
+	pushers := Dictionary new.
+	mutex := Mutex new
